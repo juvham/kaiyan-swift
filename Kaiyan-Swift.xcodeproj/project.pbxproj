@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F5BDC2C1C5B0B55009DDFDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BDC2B1C5B0B55009DDFDE /* AppDelegate.swift */; };
+		8F5BDC2E1C5B0B55009DDFDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BDC2D1C5B0B55009DDFDE /* ViewController.swift */; };
+		8F5BDC311C5B0B55009DDFDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5BDC2F1C5B0B55009DDFDE /* Main.storyboard */; };
+		8F5BDC331C5B0B55009DDFDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F5BDC321C5B0B55009DDFDE /* Assets.xcassets */; };
+		8F5BDC361C5B0B55009DDFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5BDC341C5B0B55009DDFDE /* LaunchScreen.storyboard */; };
+		8F5BDC411C5B0B55009DDFDE /* Kaiyan_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BDC401C5B0B55009DDFDE /* Kaiyan_SwiftTests.swift */; };
+		8F5BDC4C1C5B0B55009DDFDE /* Kaiyan_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BDC4B1C5B0B55009DDFDE /* Kaiyan_SwiftUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F5BDC3D1C5B0B55009DDFDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F5BDC201C5B0B55009DDFDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F5BDC271C5B0B55009DDFDE;
+			remoteInfo = "Kaiyan-Swift";
+		};
+		8F5BDC481C5B0B55009DDFDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F5BDC201C5B0B55009DDFDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F5BDC271C5B0B55009DDFDE;
+			remoteInfo = "Kaiyan-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8F5BDC281C5B0B55009DDFDE /* Kaiyan-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaiyan-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5BDC2B1C5B0B55009DDFDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F5BDC2D1C5B0B55009DDFDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F5BDC301C5B0B55009DDFDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F5BDC321C5B0B55009DDFDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F5BDC351C5B0B55009DDFDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F5BDC371C5B0B55009DDFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F5BDC3C1C5B0B55009DDFDE /* Kaiyan-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kaiyan-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5BDC401C5B0B55009DDFDE /* Kaiyan_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kaiyan_SwiftTests.swift; sourceTree = "<group>"; };
+		8F5BDC421C5B0B55009DDFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F5BDC471C5B0B55009DDFDE /* Kaiyan-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kaiyan-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5BDC4B1C5B0B55009DDFDE /* Kaiyan_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kaiyan_SwiftUITests.swift; sourceTree = "<group>"; };
+		8F5BDC4D1C5B0B55009DDFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F5BDC251C5B0B55009DDFDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5BDC391C5B0B55009DDFDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5BDC441C5B0B55009DDFDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F5BDC1F1C5B0B55009DDFDE = {
+			isa = PBXGroup;
+			children = (
+				8F5BDC2A1C5B0B55009DDFDE /* Kaiyan-Swift */,
+				8F5BDC3F1C5B0B55009DDFDE /* Kaiyan-SwiftTests */,
+				8F5BDC4A1C5B0B55009DDFDE /* Kaiyan-SwiftUITests */,
+				8F5BDC291C5B0B55009DDFDE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F5BDC291C5B0B55009DDFDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F5BDC281C5B0B55009DDFDE /* Kaiyan-Swift.app */,
+				8F5BDC3C1C5B0B55009DDFDE /* Kaiyan-SwiftTests.xctest */,
+				8F5BDC471C5B0B55009DDFDE /* Kaiyan-SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F5BDC2A1C5B0B55009DDFDE /* Kaiyan-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				8F5BDC2B1C5B0B55009DDFDE /* AppDelegate.swift */,
+				8F5BDC2D1C5B0B55009DDFDE /* ViewController.swift */,
+				8F5BDC2F1C5B0B55009DDFDE /* Main.storyboard */,
+				8F5BDC321C5B0B55009DDFDE /* Assets.xcassets */,
+				8F5BDC341C5B0B55009DDFDE /* LaunchScreen.storyboard */,
+				8F5BDC371C5B0B55009DDFDE /* Info.plist */,
+			);
+			path = "Kaiyan-Swift";
+			sourceTree = "<group>";
+		};
+		8F5BDC3F1C5B0B55009DDFDE /* Kaiyan-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F5BDC401C5B0B55009DDFDE /* Kaiyan_SwiftTests.swift */,
+				8F5BDC421C5B0B55009DDFDE /* Info.plist */,
+			);
+			path = "Kaiyan-SwiftTests";
+			sourceTree = "<group>";
+		};
+		8F5BDC4A1C5B0B55009DDFDE /* Kaiyan-SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F5BDC4B1C5B0B55009DDFDE /* Kaiyan_SwiftUITests.swift */,
+				8F5BDC4D1C5B0B55009DDFDE /* Info.plist */,
+			);
+			path = "Kaiyan-SwiftUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F5BDC271C5B0B55009DDFDE /* Kaiyan-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F5BDC501C5B0B55009DDFDE /* Build configuration list for PBXNativeTarget "Kaiyan-Swift" */;
+			buildPhases = (
+				8F5BDC241C5B0B55009DDFDE /* Sources */,
+				8F5BDC251C5B0B55009DDFDE /* Frameworks */,
+				8F5BDC261C5B0B55009DDFDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kaiyan-Swift";
+			productName = "Kaiyan-Swift";
+			productReference = 8F5BDC281C5B0B55009DDFDE /* Kaiyan-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F5BDC3B1C5B0B55009DDFDE /* Kaiyan-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F5BDC531C5B0B55009DDFDE /* Build configuration list for PBXNativeTarget "Kaiyan-SwiftTests" */;
+			buildPhases = (
+				8F5BDC381C5B0B55009DDFDE /* Sources */,
+				8F5BDC391C5B0B55009DDFDE /* Frameworks */,
+				8F5BDC3A1C5B0B55009DDFDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F5BDC3E1C5B0B55009DDFDE /* PBXTargetDependency */,
+			);
+			name = "Kaiyan-SwiftTests";
+			productName = "Kaiyan-SwiftTests";
+			productReference = 8F5BDC3C1C5B0B55009DDFDE /* Kaiyan-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F5BDC461C5B0B55009DDFDE /* Kaiyan-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F5BDC561C5B0B55009DDFDE /* Build configuration list for PBXNativeTarget "Kaiyan-SwiftUITests" */;
+			buildPhases = (
+				8F5BDC431C5B0B55009DDFDE /* Sources */,
+				8F5BDC441C5B0B55009DDFDE /* Frameworks */,
+				8F5BDC451C5B0B55009DDFDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F5BDC491C5B0B55009DDFDE /* PBXTargetDependency */,
+			);
+			name = "Kaiyan-SwiftUITests";
+			productName = "Kaiyan-SwiftUITests";
+			productReference = 8F5BDC471C5B0B55009DDFDE /* Kaiyan-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F5BDC201C5B0B55009DDFDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = juvham;
+				TargetAttributes = {
+					8F5BDC271C5B0B55009DDFDE = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					8F5BDC3B1C5B0B55009DDFDE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 8F5BDC271C5B0B55009DDFDE;
+					};
+					8F5BDC461C5B0B55009DDFDE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 8F5BDC271C5B0B55009DDFDE;
+					};
+				};
+			};
+			buildConfigurationList = 8F5BDC231C5B0B55009DDFDE /* Build configuration list for PBXProject "Kaiyan-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F5BDC1F1C5B0B55009DDFDE;
+			productRefGroup = 8F5BDC291C5B0B55009DDFDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F5BDC271C5B0B55009DDFDE /* Kaiyan-Swift */,
+				8F5BDC3B1C5B0B55009DDFDE /* Kaiyan-SwiftTests */,
+				8F5BDC461C5B0B55009DDFDE /* Kaiyan-SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F5BDC261C5B0B55009DDFDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5BDC361C5B0B55009DDFDE /* LaunchScreen.storyboard in Resources */,
+				8F5BDC331C5B0B55009DDFDE /* Assets.xcassets in Resources */,
+				8F5BDC311C5B0B55009DDFDE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5BDC3A1C5B0B55009DDFDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5BDC451C5B0B55009DDFDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F5BDC241C5B0B55009DDFDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5BDC2E1C5B0B55009DDFDE /* ViewController.swift in Sources */,
+				8F5BDC2C1C5B0B55009DDFDE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5BDC381C5B0B55009DDFDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5BDC411C5B0B55009DDFDE /* Kaiyan_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F5BDC431C5B0B55009DDFDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5BDC4C1C5B0B55009DDFDE /* Kaiyan_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F5BDC3E1C5B0B55009DDFDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F5BDC271C5B0B55009DDFDE /* Kaiyan-Swift */;
+			targetProxy = 8F5BDC3D1C5B0B55009DDFDE /* PBXContainerItemProxy */;
+		};
+		8F5BDC491C5B0B55009DDFDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F5BDC271C5B0B55009DDFDE /* Kaiyan-Swift */;
+			targetProxy = 8F5BDC481C5B0B55009DDFDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F5BDC2F1C5B0B55009DDFDE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F5BDC301C5B0B55009DDFDE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F5BDC341C5B0B55009DDFDE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F5BDC351C5B0B55009DDFDE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F5BDC4E1C5B0B55009DDFDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F5BDC4F1C5B0B55009DDFDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F5BDC511C5B0B55009DDFDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Kaiyan-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juvham.Kaiyan-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8F5BDC521C5B0B55009DDFDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Kaiyan-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juvham.Kaiyan-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8F5BDC541C5B0B55009DDFDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Kaiyan-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juvham.Kaiyan-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaiyan-Swift.app/Kaiyan-Swift";
+			};
+			name = Debug;
+		};
+		8F5BDC551C5B0B55009DDFDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Kaiyan-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juvham.Kaiyan-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaiyan-Swift.app/Kaiyan-Swift";
+			};
+			name = Release;
+		};
+		8F5BDC571C5B0B55009DDFDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Kaiyan-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juvham.Kaiyan-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Kaiyan-Swift";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8F5BDC581C5B0B55009DDFDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Kaiyan-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juvham.Kaiyan-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Kaiyan-Swift";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F5BDC231C5B0B55009DDFDE /* Build configuration list for PBXProject "Kaiyan-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F5BDC4E1C5B0B55009DDFDE /* Debug */,
+				8F5BDC4F1C5B0B55009DDFDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F5BDC501C5B0B55009DDFDE /* Build configuration list for PBXNativeTarget "Kaiyan-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F5BDC511C5B0B55009DDFDE /* Debug */,
+				8F5BDC521C5B0B55009DDFDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8F5BDC531C5B0B55009DDFDE /* Build configuration list for PBXNativeTarget "Kaiyan-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F5BDC541C5B0B55009DDFDE /* Debug */,
+				8F5BDC551C5B0B55009DDFDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8F5BDC561C5B0B55009DDFDE /* Build configuration list for PBXNativeTarget "Kaiyan-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F5BDC571C5B0B55009DDFDE /* Debug */,
+				8F5BDC581C5B0B55009DDFDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F5BDC201C5B0B55009DDFDE /* Project object */;
+}
