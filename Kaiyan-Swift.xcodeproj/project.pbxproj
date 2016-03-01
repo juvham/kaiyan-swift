@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EE3F11D5B1EBEADE9B86CDC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A494B50F5E82DFB2B1908CC8 /* Pods.framework */; };
 		8F5BDC2C1C5B0B55009DDFDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BDC2B1C5B0B55009DDFDE /* AppDelegate.swift */; };
 		8F5BDC2E1C5B0B55009DDFDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BDC2D1C5B0B55009DDFDE /* ViewController.swift */; };
 		8F5BDC311C5B0B55009DDFDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5BDC2F1C5B0B55009DDFDE /* Main.storyboard */; };
@@ -14,6 +15,10 @@
 		8F5BDC361C5B0B55009DDFDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5BDC341C5B0B55009DDFDE /* LaunchScreen.storyboard */; };
 		8F5BDC411C5B0B55009DDFDE /* Kaiyan_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BDC401C5B0B55009DDFDE /* Kaiyan_SwiftTests.swift */; };
 		8F5BDC4C1C5B0B55009DDFDE /* Kaiyan_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BDC4B1C5B0B55009DDFDE /* Kaiyan_SwiftUITests.swift */; };
+		8F5BDC5B1C5B0EF4009DDFDE /* UI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BDC5A1C5B0EF4009DDFDE /* UI+Extension.swift */; };
+		8F5BDC5D1C5B13FE009DDFDE /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BDC5C1C5B13FE009DDFDE /* LoadingViewController.swift */; };
+		8FBF68361C76B7B4009CAFCE /* EveryDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF68351C76B7B4009CAFCE /* EveryDayViewController.swift */; };
+		8FBF68501C76C45B009CAFCE /* EveryDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBF684F1C76C45B009CAFCE /* EveryDayModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A9AF9C9823DFD76E464770D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3AAC8695FE879F31EE2564C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8F5BDC281C5B0B55009DDFDE /* Kaiyan-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaiyan-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5BDC2B1C5B0B55009DDFDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F5BDC2D1C5B0B55009DDFDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,11 @@
 		8F5BDC471C5B0B55009DDFDE /* Kaiyan-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kaiyan-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5BDC4B1C5B0B55009DDFDE /* Kaiyan_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kaiyan_SwiftUITests.swift; sourceTree = "<group>"; };
 		8F5BDC4D1C5B0B55009DDFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F5BDC5A1C5B0EF4009DDFDE /* UI+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Extension.swift"; sourceTree = "<group>"; };
+		8F5BDC5C1C5B13FE009DDFDE /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		8FBF68351C76B7B4009CAFCE /* EveryDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EveryDayViewController.swift; sourceTree = "<group>"; };
+		8FBF684F1C76C45B009CAFCE /* EveryDayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EveryDayModel.swift; sourceTree = "<group>"; };
+		A494B50F5E82DFB2B1908CC8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE3F11D5B1EBEADE9B86CDC /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042B628A2ADCE23E38C0D9B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A494B50F5E82DFB2B1908CC8 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CCD2DCB40A5583EF92ABAA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AAC8695FE879F31EE2564C3 /* Pods.debug.xcconfig */,
+				1A9AF9C9823DFD76E464770D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8F5BDC1F1C5B0B55009DDFDE = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +111,8 @@
 				8F5BDC3F1C5B0B55009DDFDE /* Kaiyan-SwiftTests */,
 				8F5BDC4A1C5B0B55009DDFDE /* Kaiyan-SwiftUITests */,
 				8F5BDC291C5B0B55009DDFDE /* Products */,
+				1CCD2DCB40A5583EF92ABAA2 /* Pods */,
+				042B628A2ADCE23E38C0D9B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +131,10 @@
 			children = (
 				8F5BDC2B1C5B0B55009DDFDE /* AppDelegate.swift */,
 				8F5BDC2D1C5B0B55009DDFDE /* ViewController.swift */,
+				8FBF68351C76B7B4009CAFCE /* EveryDayViewController.swift */,
+				8FBF684F1C76C45B009CAFCE /* EveryDayModel.swift */,
+				8F5BDC5C1C5B13FE009DDFDE /* LoadingViewController.swift */,
+				8F5BDC591C5B0ED8009DDFDE /* Common */,
 				8F5BDC2F1C5B0B55009DDFDE /* Main.storyboard */,
 				8F5BDC321C5B0B55009DDFDE /* Assets.xcassets */,
 				8F5BDC341C5B0B55009DDFDE /* LaunchScreen.storyboard */,
@@ -125,6 +161,14 @@
 			path = "Kaiyan-SwiftUITests";
 			sourceTree = "<group>";
 		};
+		8F5BDC591C5B0ED8009DDFDE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8F5BDC5A1C5B0EF4009DDFDE /* UI+Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F5BDC501C5B0B55009DDFDE /* Build configuration list for PBXNativeTarget "Kaiyan-Swift" */;
 			buildPhases = (
+				B58EE780B77E2A1EDD604610 /* Check Pods Manifest.lock */,
 				8F5BDC241C5B0B55009DDFDE /* Sources */,
 				8F5BDC251C5B0B55009DDFDE /* Frameworks */,
 				8F5BDC261C5B0B55009DDFDE /* Resources */,
+				6C06049BD0C33177EFAAAAA8 /* Embed Pods Frameworks */,
+				758E8F6546BDB58D1B869D76 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,13 +298,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6C06049BD0C33177EFAAAAA8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		758E8F6546BDB58D1B869D76 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B58EE780B77E2A1EDD604610 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F5BDC241C5B0B55009DDFDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F5BDC5B1C5B0EF4009DDFDE /* UI+Extension.swift in Sources */,
+				8FBF68361C76B7B4009CAFCE /* EveryDayViewController.swift in Sources */,
 				8F5BDC2E1C5B0B55009DDFDE /* ViewController.swift in Sources */,
 				8F5BDC2C1C5B0B55009DDFDE /* AppDelegate.swift in Sources */,
+				8FBF68501C76C45B009CAFCE /* EveryDayModel.swift in Sources */,
+				8F5BDC5D1C5B13FE009DDFDE /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +496,7 @@
 		};
 		8F5BDC511C5B0B55009DDFDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AAC8695FE879F31EE2564C3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Kaiyan-Swift/Info.plist";
@@ -408,6 +508,7 @@
 		};
 		8F5BDC521C5B0B55009DDFDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A9AF9C9823DFD76E464770D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Kaiyan-Swift/Info.plist";
@@ -484,6 +585,7 @@
 				8F5BDC521C5B0B55009DDFDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F5BDC531C5B0B55009DDFDE /* Build configuration list for PBXNativeTarget "Kaiyan-SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +594,7 @@
 				8F5BDC551C5B0B55009DDFDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F5BDC561C5B0B55009DDFDE /* Build configuration list for PBXNativeTarget "Kaiyan-SwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +603,7 @@
 				8F5BDC581C5B0B55009DDFDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
