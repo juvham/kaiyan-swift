@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		5EE3F11D5B1EBEADE9B86CDC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A494B50F5E82DFB2B1908CC8 /* Pods.framework */; };
 		8F336F371C86A70D00E22538 /* EveryDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F336F361C86A70D00E22538 /* EveryDayTableViewCell.swift */; };
+		8F336F3C1C86EF1800E22538 /* FZLTXIHJW--GB1-0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 8F336F391C86EDE400E22538 /* FZLTXIHJW--GB1-0.TTF */; };
+		8F336F3D1C86EF1800E22538 /* FZLTZCHJW--GB1-0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 8F336F3A1C86EDE400E22538 /* FZLTZCHJW--GB1-0.TTF */; };
+		8F336F3E1C86EF1800E22538 /* Lobster 1.4.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F336F3B1C86EDE400E22538 /* Lobster 1.4.otf */; };
+		8F336F401C86F60500E22538 /* EveryDaySectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F336F3F1C86F60500E22538 /* EveryDaySectionHeaderView.swift */; };
+		8F336F421C86F81D00E22538 /* EveryDaySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F336F411C86F81D00E22538 /* EveryDaySectionHeaderView.xib */; };
 		8F5BDC2C1C5B0B55009DDFDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BDC2B1C5B0B55009DDFDE /* AppDelegate.swift */; };
 		8F5BDC2E1C5B0B55009DDFDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BDC2D1C5B0B55009DDFDE /* ViewController.swift */; };
 		8F5BDC311C5B0B55009DDFDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5BDC2F1C5B0B55009DDFDE /* Main.storyboard */; };
@@ -44,6 +49,11 @@
 		3AAC8695FE879F31EE2564C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8F336F351C859F5100E22538 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		8F336F361C86A70D00E22538 /* EveryDayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EveryDayTableViewCell.swift; sourceTree = "<group>"; };
+		8F336F391C86EDE400E22538 /* FZLTXIHJW--GB1-0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZLTXIHJW--GB1-0.TTF"; sourceTree = "<group>"; };
+		8F336F3A1C86EDE400E22538 /* FZLTZCHJW--GB1-0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZLTZCHJW--GB1-0.TTF"; sourceTree = "<group>"; };
+		8F336F3B1C86EDE400E22538 /* Lobster 1.4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster 1.4.otf"; sourceTree = "<group>"; };
+		8F336F3F1C86F60500E22538 /* EveryDaySectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EveryDaySectionHeaderView.swift; sourceTree = "<group>"; };
+		8F336F411C86F81D00E22538 /* EveryDaySectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EveryDaySectionHeaderView.xib; sourceTree = "<group>"; };
 		8F5BDC281C5B0B55009DDFDE /* Kaiyan-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kaiyan-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5BDC2B1C5B0B55009DDFDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F5BDC2D1C5B0B55009DDFDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +117,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8F336F381C86EDCC00E22538 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		8F5BDC1F1C5B0B55009DDFDE = {
 			isa = PBXGroup;
 			children = (
@@ -136,8 +153,14 @@
 				8F5BDC2D1C5B0B55009DDFDE /* ViewController.swift */,
 				8FBF68351C76B7B4009CAFCE /* EveryDayViewController.swift */,
 				8F336F361C86A70D00E22538 /* EveryDayTableViewCell.swift */,
+				8F336F3F1C86F60500E22538 /* EveryDaySectionHeaderView.swift */,
+				8F336F411C86F81D00E22538 /* EveryDaySectionHeaderView.xib */,
 				8FBF684F1C76C45B009CAFCE /* EveryDayModel.swift */,
 				8F5BDC5C1C5B13FE009DDFDE /* LoadingViewController.swift */,
+				8F336F381C86EDCC00E22538 /* Resource */,
+				8F336F391C86EDE400E22538 /* FZLTXIHJW--GB1-0.TTF */,
+				8F336F3A1C86EDE400E22538 /* FZLTZCHJW--GB1-0.TTF */,
+				8F336F3B1C86EDE400E22538 /* Lobster 1.4.otf */,
 				8F336F351C859F5100E22538 /* MyPlayground.playground */,
 				8F5BDC591C5B0ED8009DDFDE /* Common */,
 				8F5BDC2F1C5B0B55009DDFDE /* Main.storyboard */,
@@ -281,6 +304,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F336F421C86F81D00E22538 /* EveryDaySectionHeaderView.xib in Resources */,
+				8F336F3C1C86EF1800E22538 /* FZLTXIHJW--GB1-0.TTF in Resources */,
+				8F336F3D1C86EF1800E22538 /* FZLTZCHJW--GB1-0.TTF in Resources */,
+				8F336F3E1C86EF1800E22538 /* Lobster 1.4.otf in Resources */,
 				8F5BDC361C5B0B55009DDFDE /* LaunchScreen.storyboard in Resources */,
 				8F5BDC331C5B0B55009DDFDE /* Assets.xcassets in Resources */,
 				8F5BDC311C5B0B55009DDFDE /* Main.storyboard in Resources */,
@@ -360,6 +387,7 @@
 				8FBF68361C76B7B4009CAFCE /* EveryDayViewController.swift in Sources */,
 				8F336F371C86A70D00E22538 /* EveryDayTableViewCell.swift in Sources */,
 				8F5BDC2E1C5B0B55009DDFDE /* ViewController.swift in Sources */,
+				8F336F401C86F60500E22538 /* EveryDaySectionHeaderView.swift in Sources */,
 				8F5BDC2C1C5B0B55009DDFDE /* AppDelegate.swift in Sources */,
 				8FBF68501C76C45B009CAFCE /* EveryDayModel.swift in Sources */,
 				8F5BDC5D1C5B13FE009DDFDE /* LoadingViewController.swift in Sources */,

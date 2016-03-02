@@ -12,6 +12,67 @@ import Gloss
 
 public var kEveryDay = "http://baobab.wandoujia.com/api/v1/feed?num=10&date=%@&vc=67&u=011f2924aa2cf27aa5dc8066c041fe08116a9a0c&v=1.8.0&f=iphone"
 
+struct EveryDayViewModel {
+    
+    var pageModel : PageModel?
+    
+    func request(completionHandler: (PageModel?) -> Void) -> Request  {
+        
+        let dateformatter : NSDateFormatter = {
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "yyyyMMdd"
+            return formatter
+        }()
+        let date = NSDate()
+        let string = dateformatter.stringFromDate(date)
+        let url =  String(format: kEveryDay, arguments: [string])
+        return  Alamofire.request(.POST, url).responseJSON { response in
+            
+            guard  response.result.isSuccess
+                else {
+                    
+                    completionHandler(nil)
+                    return
+            }
+            
+            let pageData :PageModel = PageModel(json: response.result.value as! JSON )!
+            completionHandler (pageData)
+            
+        }
+        
+    }
+    
+    func dayCount() -> Int{
+        
+        guard let count = pageModel?.dailyList?.count
+            else { return 0}
+        return count
+    }
+    func videoCount(index:Int) -> Int {
+        
+        guard let count = pageModel?.dailyList?[index].videoList?.count
+            else { return 0 }
+        
+        return count
+    }
+    func everyDayModelAtIndex(index:Int) ->EveryDayModel? {
+        
+        guard let dayModel = pageModel?.dailyList?[index]
+            else { return nil}
+        
+        return dayModel;
+    }
+    
+    func videoModelAtIndexPath(indexPath : NSIndexPath) -> VideoModel? {
+        
+        guard let videoModel = pageModel?.dailyList?[indexPath.section].videoList?[indexPath.row]
+            else { return nil}
+        
+        return videoModel;
+    }
+    
+}
+
 struct PlayInfo :Decodable {
     
     var     height : String?
@@ -30,24 +91,12 @@ struct PlayInfo :Decodable {
     }
     
 }
-
 struct PageModel : Decodable {
     var dailyList : Array<EveryDayModel>?
     var nextPageUrl : String?
     var nextPublishTime : Int?
     
     init?(json: JSON) {
-        
-//        guard let nextPublishTime : String = "nextPublishTime" <~~ json
-//            else { return nil}
-        
-//        let array = json["dailyList"] as! [JSON]
-//
-//        guard let dailyList :[EveryDayModel] = EveryDayModel.modelsFromJSONArray(array)
-//            else { /* handle nil object here */
-//        return nil
-//        }
-        
         self.dailyList = "dailyList" <~~ json
         self.nextPageUrl = "nextPageUrl" <~~ json
         self.nextPublishTime = "nextPublishTime" <~~ json
@@ -55,7 +104,7 @@ struct PageModel : Decodable {
 }
 
 struct EveryDayModel: Decodable {
-    var date : Int?
+    var date : Double?
     var total : Int?
     var videoList : Array<VideoModel>?
     
@@ -148,19 +197,6 @@ struct VideoModel: Decodable {
         self.waterMarks = "waterMarks" <~~ json
         self.webAdTrack = "webAdTrack" <~~ json
         self.webUrl = "webUrl" <~~ json
-    }
-    
-    static func request() -> Request{
-        
-        let dateformatter : NSDateFormatter = {
-            let formatter = NSDateFormatter()
-            formatter.dateFormat = "yyyyMMdd"
-            return formatter
-        }()
-        let date = NSDate()
-        let string = dateformatter.stringFromDate(date)
-        let url =  String(format: kEveryDay, arguments: [string])
-        return Alamofire.request(.POST, url)
     }
 
 }

@@ -23,7 +23,10 @@ class EveryDayTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
     
-        self.selectionStyle = UITableViewCellSelectionStyle.None
+        selectionStyle = UITableViewCellSelectionStyle.None
+        
+        titleLabel.font = UIFont.chzBoldFontOfSize(17);
+        littileLabel.font = UIFont.chzFontOfSize(12);
     }
     
     func cellOffset() -> CGFloat {
@@ -36,7 +39,7 @@ class EveryDayTableViewCell: UITableViewCell {
         
         let cellOffsetY = centerY - windowCenter.y;
         
-        let offsetDig = cellOffsetY / ((self.superview!.frame.size.height + kWidth * 0.6) / 2);
+        let offsetDig = cellOffsetY / ((self.superview!.frame.size.height) / 2);
         let offset =  -offsetDig * (kWidth * 0.2);
         
         let transY = CGAffineTransformMakeTranslation(0,offset);

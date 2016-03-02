@@ -16,56 +16,33 @@ class EveryDayViewController: UIViewController ,UITableViewDelegate ,UITableView
     
     @IBOutlet var tableView : UITableView?
     
-    var pageData : PageModel?
+   lazy var pageData : EveryDayViewModel = {
+    
+        let model = EveryDayViewModel()
+        return model
+        
+    }()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blueColor()
         
+        tableView?.registerNib(UINib(nibName: "EveryDaySectionHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: EveryDaySectionHeaderView.everyDayHeaderViewReuseIdentifier)
         
-        VideoModel.request().responseJSON(completionHandler: { response in
-            
-            response.response
-            
-            guard  response.result.isSuccess
-                else { return}
-
-            let pageData :PageModel = PageModel(json: response.result.value as! JSON )!
-            
-            self.pageData = pageData;
-            
-            if NSThread.currentThread().isMainThread {
-                self.tableView?.reloadData()
-            } else {
-                
-                dispatch_async(dispatch_get_main_queue(), {[unowned self] in
-                    self.tableView?.reloadData()
-                    })
-            }
-            
-
-        })
+        pageData.request { pageModel -> Void in
+            self.pageData.pageModel = pageModel
+            self.tableView?.reloadData()
+        }
     }
     
     func  numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-       guard let count = pageData?.dailyList?.count
-        else {
-            
-            return 0;
-        }
-        return count;
+        return pageData.dayCount()
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        guard let count = pageData?.dailyList?[section].videoList?.count
-            else {
-                
-                return 0;
-        }
-        
-        return count
+        return  pageData.videoCount(section)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -78,10 +55,38 @@ class EveryDayViewController: UIViewController ,UITableViewDelegate ,UITableView
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
        
-        let videoModel :VideoModel = (pageData?.dailyList?[indexPath.section].videoList?[indexPath.row])!
         let everyDayCell = cell as! EveryDayTableViewCell
-        everyDayCell.setModel(videoModel)
+        
         everyDayCell.cellOffset()
+        guard let videoModel = pageData.videoModelAtIndexPath(indexPath)
+            else { return }
+        everyDayCell.setModel(videoModel)
+        
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        let visibleCell : Array<EveryDayTableViewCell> = tableView?.visibleCells as! [EveryDayTableViewCell]
+        for  evetryDayCell in visibleCell {
+            evetryDayCell.cellOffset()
+        }
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerView = tableView .dequeueReusableHeaderFooterViewWithIdentifier(EveryDaySectionHeaderView.everyDayHeaderViewReuseIdentifier)
+        
+        return headerView;
+    }
+    
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        let headerView = view as! EveryDaySectionHeaderView
+        
+        guard let dayModel = pageData.everyDayModelAtIndex(section)
+            else { return }
+        headerView.setModel(dayModel)
+        
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -95,18 +100,8 @@ class EveryDayViewController: UIViewController ,UITableViewDelegate ,UITableView
     }
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
+        if section == 0 {return 0.01}
         return 50;
     }
-    
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        
-        let visibleCell : Array<EveryDayTableViewCell> = tableView?.visibleCells as! [EveryDayTableViewCell]
-        for  evetryDayCell in visibleCell {
-        
-            evetryDayCell.cellOffset()
-        }
-
-    }
-    
 
 }

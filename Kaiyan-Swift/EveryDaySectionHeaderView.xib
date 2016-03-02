@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="everyDayHeaderViewReuseIdentifier" id="iN0-l3-epB" customClass="EveryDaySectionHeaderView" customModule="Kaiyan_Swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOb-LD-C9I">
+                    <rect key="frame" x="163.5" y="22" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <accessibility key="accessibilityConfiguration" identifier="everyDayHeaderViewReuseIdentifier"/>
+            <constraints>
+                <constraint firstItem="zOb-LD-C9I" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hSd-sV-Qdl"/>
+                <constraint firstItem="zOb-LD-C9I" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lzE-gN-D8m"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="label" destination="zOb-LD-C9I" id="Veg-Pg-jNx"/>
+            </connections>
+            <point key="canvasLocation" x="183.5" y="-135"/>
+        </view>
+    </objects>
+</document>

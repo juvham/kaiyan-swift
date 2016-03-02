@@ -48,5 +48,11 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FZLTXIHJW--GB1-0.TTF</string>
+		<string>FZLTZCHJW--GB1-0.TTF</string>
+		<string>Lobster 1.4.otf</string>
+	</array>
 </dict>
 </plist>

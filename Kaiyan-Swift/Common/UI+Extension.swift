@@ -17,6 +17,31 @@ extension UIView {
     
 }
 
+extension UIFont {
+    
+   class func chzFontOfSize(fontSize: CGFloat) -> UIFont {
+        guard let font = UIFont(name: "FZLTXIHJW--GB1-0", size: fontSize)
+            else { return systemFontOfSize(fontSize)}
+       return font
+    }
+    
+    class func chzBoldFontOfSize(fontSize: CGFloat) -> UIFont {
+        guard let font = UIFont(name: "FZLTZCHJW--GB1-0", size: fontSize)
+            else {
+                return systemFontOfSize(fontSize)
+        }
+        return font
+    }
+    
+    class func engLFontOfSize(fontSize: CGFloat) -> UIFont {
+        guard let font = UIFont(name: "Lobster 1.4", size: fontSize)
+            else {
+                return systemFontOfSize(fontSize)
+        }
+        return font
+    }
+}
+
 extension UINavigationController {
     
     public override func childViewControllerForStatusBarHidden() -> UIViewController? {
