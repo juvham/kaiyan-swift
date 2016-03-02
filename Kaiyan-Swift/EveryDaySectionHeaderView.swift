@@ -36,10 +36,9 @@ class EveryDaySectionHeaderView: UITableViewHeaderFooterView {
                
                 return
         }
-        let date = NSDate(timeIntervalSince1970:dateNumber)
-        
+
+        let date = NSDate(timeIntervalSince1970: dateNumber / 1000)
         let string = EveryDaySectionHeaderView.dateFormatter.stringFromDate(date)
-        
         label.text = String(format: "-%@-", arguments: [string])
     
     }

@@ -12,7 +12,7 @@ import Gloss
 
 public var kEveryDay = "http://baobab.wandoujia.com/api/v1/feed?num=10&date=%@&vc=67&u=011f2924aa2cf27aa5dc8066c041fe08116a9a0c&v=1.8.0&f=iphone"
 
-struct EveryDayViewModel {
+class EveryDayViewModel: NSObject {
     
     var pageModel : PageModel?
     
@@ -73,7 +73,7 @@ struct EveryDayViewModel {
     
 }
 
-struct PlayInfo :Decodable {
+class  PlayInfo :NSObject,Decodable {
     
     var     height : String?
     var     width: String?
@@ -81,7 +81,7 @@ struct PlayInfo :Decodable {
     var     type: String?
     var     url : String?
    
-    init?(json: JSON) {
+    required init?(json: JSON) {
         
         self.height = "height" <~~ json
         self.width = "width" <~~ json
@@ -91,24 +91,24 @@ struct PlayInfo :Decodable {
     }
     
 }
-struct PageModel : Decodable {
+class PageModel : NSObject, Decodable {
     var dailyList : Array<EveryDayModel>?
     var nextPageUrl : String?
     var nextPublishTime : Int?
     
-    init?(json: JSON) {
+    required init?(json: JSON) {
         self.dailyList = "dailyList" <~~ json
         self.nextPageUrl = "nextPageUrl" <~~ json
         self.nextPublishTime = "nextPublishTime" <~~ json
     }
 }
 
-struct EveryDayModel: Decodable {
+class EveryDayModel: NSObject, Decodable {
     var date : Double?
     var total : Int?
     var videoList : Array<VideoModel>?
     
-    init?(json: JSON) {
+    required init?(json: JSON) {
         self.date = "date" <~~ json
         self.total = "total" <~~ json
         self.videoList = "videoList" <~~ json
@@ -116,13 +116,13 @@ struct EveryDayModel: Decodable {
     }
 }
 
-struct Consumption : Decodable{
+class Consumption : NSObject, Decodable{
     var collectionCount : Int?
     var playCount : Int?
     var replyCount : Int?
     var shareCount : Int?
     
-    init?(json: JSON) {
+    required init?(json: JSON) {
         self.collectionCount = "collectionCount" <~~ json
         self.playCount = "playCount" <~~ json
         self.replyCount = "replyCount" <~~ json
@@ -131,12 +131,12 @@ struct Consumption : Decodable{
     }
 }
 
-struct Provider : Decodable {
+class Provider : NSObject, Decodable {
     var alias : String?
     var icon : String?
     var name : String?
     
-    init?(json: JSON) {
+    required init?(json: JSON) {
         
         self.alias = "playCount" <~~ json
         self.icon = "replyCount" <~~ json
@@ -144,7 +144,7 @@ struct Provider : Decodable {
     }
 }
 
-struct VideoModel: Decodable {
+class VideoModel: NSObject, Decodable {
     
     var adTrack : String?
     var author : String?
@@ -155,7 +155,7 @@ struct VideoModel: Decodable {
     var coverForFeed : String?
     var coverForSharing : String?
     var date : String?
-    var description : String?
+    var descriptionString : String?
     var duration : Int?
     var favoriteAdTrack : String?
     var id : String?
@@ -171,7 +171,7 @@ struct VideoModel: Decodable {
     var webAdTrack : String?
     var webUrl : String?
     
-    init?(json: JSON) {
+    required init?(json: JSON) {
         
         self.adTrack = "adTrack" <~~ json
         self.author = "author" <~~ json
@@ -182,7 +182,7 @@ struct VideoModel: Decodable {
         self.coverForFeed = "coverForFeed" <~~ json
         self.coverForSharing = "coverForSharing" <~~ json
         self.date = "date" <~~ json
-        self.description = "description" <~~ json
+        self.descriptionString = "description" <~~ json
         self.duration = "duration" <~~ json
         self.favoriteAdTrack = "favoriteAdTrack" <~~ json
         self.id = "id" <~~ json

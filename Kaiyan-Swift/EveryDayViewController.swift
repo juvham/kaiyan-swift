@@ -76,6 +76,8 @@ class EveryDayViewController: UIViewController ,UITableViewDelegate ,UITableView
         
         let headerView = tableView .dequeueReusableHeaderFooterViewWithIdentifier(EveryDaySectionHeaderView.everyDayHeaderViewReuseIdentifier)
         
+        guard section != 0
+            else { return nil}
         return headerView;
     }
     

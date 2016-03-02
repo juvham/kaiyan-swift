@@ -19,16 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UWX-5z-I4u"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="550" y="-517"/>
         </scene>
-        <!--Every Day View Controller-->
+        <!--每日精选-->
         <scene sceneID="e4R-jk-Pue">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="1P9-gx-dyP" customClass="EveryDayViewController" customModule="Kaiyan_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="每日精选" automaticallyAdjustsScrollViewInsets="NO" id="1P9-gx-dyP" customClass="EveryDayViewController" customModule="Kaiyan_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XS1-Nw-FgM"/>
                         <viewControllerLayoutGuide type="bottom" id="eok-bv-GyY"/>
@@ -111,7 +110,7 @@
                             <constraint firstItem="eok-bv-GyY" firstAttribute="top" secondItem="eFT-qy-uU2" secondAttribute="bottom" id="aa4-qV-DAn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="94h-Jm-BKH"/>
+                    <navigationItem key="navigationItem" title="每日精选" id="JU6-Bc-hC2"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="eFT-qy-uU2" id="hDs-g3-wGK"/>
