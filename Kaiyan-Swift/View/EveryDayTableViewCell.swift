@@ -40,7 +40,7 @@ class EveryDayTableViewCell: UITableViewCell {
         let cellOffsetY = centerY - windowCenter.y;
         
         let offsetDig = cellOffsetY / ((self.superview!.frame.size.height) / 2);
-        let offset =  -offsetDig * (kWidth * 0.2);
+        let offset =  -offsetDig * (kWidth * 0.05);
         
         let transY = CGAffineTransformMakeTranslation(0,offset);
         
@@ -52,7 +52,7 @@ class EveryDayTableViewCell: UITableViewCell {
     
     func setModel(videoModel: VideoModel) {
 
-        moveableImageView.hnk_setImageFromURL(NSURL(string: videoModel.coverForDetail!)!)
+        moveableImageView.hnk_setImageFromURL(NSURL(string: videoModel.coverForDetail)!)
 
         titleLabel.text = videoModel.title
             

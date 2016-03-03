@@ -38,7 +38,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="183" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="eFT-qy-uU2">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="moveableCell" rowHeight="225" id="MOh-lF-peq" customClass="EveryDayTableViewCell" customModule="Kaiyan_Swift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="49.5" width="375" height="225"/>
@@ -48,9 +48,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="82a-mn-RF9">
-                                                    <rect key="frame" x="0.0" y="-76" width="375" height="375.5"/>
+                                                    <rect key="frame" x="0.0" y="-19.5" width="375" height="262.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="82a-mn-RF9" secondAttribute="height" id="OkH-lc-vEs"/>
+                                                        <constraint firstAttribute="width" secondItem="82a-mn-RF9" secondAttribute="height" multiplier="10:7" id="OkH-lc-vEs"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b71-uM-R6Z">
@@ -110,7 +110,9 @@
                             <constraint firstItem="eok-bv-GyY" firstAttribute="top" secondItem="eFT-qy-uU2" secondAttribute="bottom" id="aa4-qV-DAn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="每日精选" id="JU6-Bc-hC2"/>
+                    <navigationItem key="navigationItem" title="每日精选" id="JU6-Bc-hC2">
+                        <barButtonItem key="rightBarButtonItem" image="btn_menu_normal" id="PhF-OJ-qnc"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="eFT-qy-uU2" id="hDs-g3-wGK"/>
@@ -139,4 +141,7 @@
             <point key="canvasLocation" x="550" y="172"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_menu_normal" width="30" height="30"/>
+    </resources>
 </document>

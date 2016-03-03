@@ -50,7 +50,7 @@ class EveryDayViewModel: NSObject {
     }
     func videoCount(index:Int) -> Int {
         
-        guard let count = pageModel?.dailyList?[index].videoList?.count
+        guard let count = pageModel?.dailyList?[index].videoList.count
             else { return 0 }
         
         return count
@@ -65,7 +65,7 @@ class EveryDayViewModel: NSObject {
     
     func videoModelAtIndexPath(indexPath : NSIndexPath) -> VideoModel? {
         
-        guard let videoModel = pageModel?.dailyList?[indexPath.section].videoList?[indexPath.row]
+        guard let videoModel = pageModel?.dailyList?[indexPath.section].videoList[indexPath.row]
             else { return nil}
         
         return videoModel;
@@ -106,13 +106,19 @@ class PageModel : NSObject, Decodable {
 class EveryDayModel: NSObject, Decodable {
     var date : Double?
     var total : Int?
-    var videoList : Array<VideoModel>?
+    var videoList : Array<VideoModel>
     
     required init?(json: JSON) {
         self.date = "date" <~~ json
         self.total = "total" <~~ json
-        self.videoList = "videoList" <~~ json
         
+        if let videoList :[VideoModel] = "videoList" <~~ json {
+            self.videoList = videoList
+        } else {
+            
+            self.videoList = []
+        }
+    
     }
 }
 
@@ -151,7 +157,7 @@ class VideoModel: NSObject, Decodable {
     var category : String?
     var consumption : Consumption?
     var coverBlurred : String?
-    var coverForDetail : String?
+    var coverForDetail : String
     var coverForFeed : String?
     var coverForSharing : String?
     var date : String?
@@ -178,7 +184,13 @@ class VideoModel: NSObject, Decodable {
         self.category = "category" <~~ json
         self.consumption = "consumption" <~~ json
         self.coverBlurred = "coverBlurred" <~~ json
-        self.coverForDetail = "coverForDetail" <~~ json
+        
+        if let coverForDetail : String = "coverForDetail" <~~ json {
+            
+            self.coverForDetail = coverForDetail
+        }
+        else {  self.coverForDetail = "" }
+        
         self.coverForFeed = "coverForFeed" <~~ json
         self.coverForSharing = "coverForSharing" <~~ json
         self.date = "date" <~~ json
