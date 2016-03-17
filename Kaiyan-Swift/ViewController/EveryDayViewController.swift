@@ -6,11 +6,10 @@
 //  Copyright © 2016年 juvham. All rights reserved.
 //
 
-
-
 import UIKit
 import Alamofire
 import Gloss
+import Haneke
 
 class EveryDayViewController: UIViewController ,UITableViewDelegate ,UITableViewDataSource {
     
@@ -25,6 +24,7 @@ class EveryDayViewController: UIViewController ,UITableViewDelegate ,UITableView
     
     var rilegoulView : RilegouleView!
     var currentIndexPath : NSIndexPath = NSIndexPath(forRow: 0, inSection: 0)
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -67,7 +67,6 @@ class EveryDayViewController: UIViewController ,UITableViewDelegate ,UITableView
        
         let everyDayCell = cell as! EveryDayTableViewCell
         
-        
         guard let videoModel = pageData.videoModelAtIndexPath(indexPath)
             else { return }
         everyDayCell.setModel(videoModel)
@@ -84,14 +83,18 @@ class EveryDayViewController: UIViewController ,UITableViewDelegate ,UITableView
             }
         } else if scrollView.isEqual(rilegoulView.contenScroll) {
             
-            
             for  subiview in rilegoulView.contenScroll.subviews {
                 
                 guard subiview.respondsToSelector("imageOffsetX")
-                    else { return }
+                    else { continue }
                 
                 (subiview as! ImageContentView).imageOffsetX()
             }
+            
+            let point = scrollView.panGestureRecognizer .translationInView(self.view)
+            let drection:CGFloat = point.x
+        
+            rilegoulView .animationToAfter((drection > 0.000 ? false : true), progress:Double( abs(drection/kWidth)))
 
         }
     }
@@ -157,8 +160,6 @@ class EveryDayViewController: UIViewController ,UITableViewDelegate ,UITableView
         guard let dayModel = pageData.everyDayModelAtIndex(indexPath.section)
             else { return }
         
-        currentIndexPath = indexPath
-
         rilegoulView = RilegouleView(frame: self.view.bounds, model: dayModel, index: indexPath.row)
         rilegoulView.contenScroll.delegate = self
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! EveryDayTableViewCell
@@ -170,6 +171,8 @@ class EveryDayViewController: UIViewController ,UITableViewDelegate ,UITableView
         rilegoulView.bottomContainer.addGestureRecognizer(swipeGesture)
         view.addSubview(rilegoulView)
         
+        currentIndexPath = indexPath
+
         rilegoulView.animationShow()
     }
     

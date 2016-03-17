@@ -16,6 +16,7 @@ class LoadingViewController: UIViewController {
         tempImageView.contentMode = UIViewContentMode.ScaleToFill
         tempImageView.image =  UIImage(named: "ULaunchImage")
         tempImageView.tintColor = UIColor(white: 0.9, alpha: 1)
+        tempImageView.userInteractionEnabled = false
         return tempImageView
     }()
     
@@ -24,12 +25,14 @@ class LoadingViewController: UIViewController {
         var tempImageView = UIImageView(frame:  UIView.ScreenBounds() )
         tempImageView.contentMode = UIViewContentMode.ScaleToFill
         tempImageView.image = UIImage(named: "Splash_BKG")
+        tempImageView.userInteractionEnabled = false
         return tempImageView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.userInteractionEnabled = true
         // Do any additional setup after loading the view.
         self.view.addSubview(backImageView);
         self.view.addSubview(splashImageView);
@@ -71,8 +74,9 @@ class LoadingViewController: UIViewController {
         splashImageView.layer.addAnimation(translationAnimation, forKey: "translationAnimation")
         
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
-        scaleAnimation.fromValue = NSValue(CGPoint: CGPointMake(1, 1))
-        scaleAnimation.toValue = NSValue(CGPoint: CGPointMake(1.05, 1.05))
+        scaleAnimation.fromValue = 1
+        scaleAnimation.toValue = 1.1
+
         scaleAnimation.fillMode = kCAFillModeForwards
         scaleAnimation.duration = 2
 

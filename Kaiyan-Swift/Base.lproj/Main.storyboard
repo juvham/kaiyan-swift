@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="550" y="-517"/>
+            <point key="canvasLocation" x="529" y="-573"/>
         </scene>
         <!--每日精选-->
         <scene sceneID="e4R-jk-Pue">

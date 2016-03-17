@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 class RilegouleView: UIView {
     
@@ -14,8 +15,6 @@ class RilegouleView: UIView {
     var currentIndex : Int! {
         
         didSet {
-           
-        
             contentView.model = model.videoList[currentIndex]
         }
     }
@@ -27,6 +26,7 @@ class RilegouleView: UIView {
         top.clipsToBounds = true
         return top
     }()
+    var contentImages:Dictionary<String,UIImage> = Dictionary()
     
     var bottomContainer : UIView = {
        
@@ -87,6 +87,7 @@ class RilegouleView: UIView {
                     
                     self.layoutIfNeeded()
                     }) {  success in
+                      
                         
                 }
         }
@@ -131,7 +132,53 @@ class RilegouleView: UIView {
         topContanier.addSubview(contenScroll)
         currentIndex = index
         contentView.model = model.videoList[currentIndex]
+        
+        for mod in model.videoList {
+            let cache = Shared.imageCache
+            let URL = NSURL(string: mod.coverBlurred!)!
+            let fetcher = NetworkFetcher<UIImage>(URL: URL)
+            cache.fetch(fetcher: fetcher).onSuccess { image in
+                // Do something with image
+                
+                self.contentImages.updateValue(image, forKey: mod.coverBlurred!)
+            }
+        }
     }
+    
+    func animationToAfter(next :Bool , progress :Double) {
+        
+        var nextIndex:Int = currentIndex
+        if next {
+            
+            nextIndex =  min(model.videoList.count - 1, currentIndex + 1) ;
+        } else {
+            
+            nextIndex =  max(0,currentIndex - 1);
+        }
+        
+        
+        guard nextIndex != currentIndex
+            else {
+                return
+        }
+        
+//        contentView.animationLayer.contents = contentView.imageView.image
+        
+        let image = contentImages[model.videoList[nextIndex].coverBlurred!]
+        
+        guard let _:UIImage = image
+            else {
+                
+                return
+        }
+        
+        contentView.contentAnimation.fromValue = contentView.imageView.image?.CGImage
+        contentView.contentAnimation.toValue = image?.CGImage
+
+        
+        contentView.animationLayer.timeOffset = progress
+        
+}
     
     override init(frame: CGRect) {
         super.init(frame: frame)
